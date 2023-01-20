@@ -25,6 +25,7 @@ journa_list = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier","@marionsouzeau
     end
 
 def menu(journa_list)
+    puts "    ***  Entrez le numero de votre choix  ***"
     puts " 1  Nombre de handle dans la liste."
     puts " 2  Le handle le plus court de la liste."
     puts " 3  Nombre de handle de 5 caractère."
@@ -32,8 +33,8 @@ def menu(journa_list)
     puts " 5  Trie la liste des handle par ordre alphabetique."
     puts " 6  Trie les handle du plus petit au plus grand."
     puts " 7  Trouver epenser dans la liste."
-    puts " 8  Répartition des handles par nombre de caractère."
-    puts "    ***  Entrez le numero qui vous convient  ***"
+    
+    
 
     n = gets.chomp.to_i
         while n >= 1 && n <=8
@@ -61,8 +62,6 @@ def menu(journa_list)
             elsif n == 7
                 puts "epenser se trouve à la  #{journa_list.find_index("@epenser")} ème postion" 
 
-            elsif n == 8
-                menu(journa_list)
             end
             puts "Autre chose ?"
             n = gets.chomp.to_i
@@ -70,3 +69,4 @@ def menu(journa_list)
 end
 
 menu(journa_list)
+
